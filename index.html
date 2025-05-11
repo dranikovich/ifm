@@ -19,7 +19,7 @@
     <header id="header">
         <section class="section-header">
             <div class="container-fluid df">
-                <div class="w25 logo df">
+                <a href="./index.html" class="w25 logo df">
                     <svg style="" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#------1_clip0-188-183)">
                             <path
@@ -237,7 +237,7 @@
                             d="M224.715 59.8007H221.418L226.442 45.2259H230.407L235.424 59.8007H232.127L228.481 48.5565H228.368L224.715 59.8007ZM224.509 54.0719H232.298V56.4773H224.509V54.0719Z"
                             fill="#1D6295" />
                     </svg>
-                </div>
+                </a>
                 <div class="w50 links df jcse aic">
                     <a href="#" data-target="dropdown1" class="nav-link">Абитуриенту</a>
                     <a href="#" data-target="dropdown2" class="nav-link">Студенту</a>
@@ -520,7 +520,7 @@
 
     <!-- Dropdown Студентам -->
     <div id="dropdown2" class="dropdown student">
-        <div class="content df w100">
+        <div class="content df w100 w">
             <a href="" class="link schedule">
                 <svg width="100%" style="" viewBox="0 0 78 86" fill="#1D6295" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24.5777 37.391H16.0312V45.9381H24.5777V37.391Z" fill="inherit" />
@@ -1078,19 +1078,19 @@
                 <h3>
                     Следующий семинар: <span>Лазерные системы охлаждения</span>
                 </h3>
-                <h5>10.05.2025 в 13.40</h5>
+                <h5>15.05.2025 в 13.40</h5>
                 <h5>до следующего семинара осталось:</h5>
-                <div class="w50 df jcsb">
+                <div class="w100 df jcc">
                     <div class="rect days df jcc aic fldc">
-                        <h4>3</h4>
+                        <h4 id="days">3</h4>
                         <h5>Дня</h5>
                     </div>
                     <div class="rect hours df jcc aic fldc">
-                        <h4>5</h4>
+                        <h4 id="hours">5</h4>
                         <h5>часов</h5>
                     </div>
                     <div class="rect minutes df jcc aic fldc">
-                        <h4>32</h4>
+                        <h4 id="minutes">32</h4>
                         <h5>минуты</h5>
                     </div>
                 </div>
@@ -1315,48 +1315,31 @@
             grabCursor: true,
         });
 
+        const targetDate = new Date("2025-05-15T13:40:00");
 
+        function updateCountdown() {
+            const now = new Date();
+            const diff = targetDate - now;
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('fullImage');
-            const captionText = document.getElementById('caption');
-            const closeBtn = document.querySelector('.close');
+            if (diff <= 0) {
+                document.getElementById("days").textContent = "0";
+                document.getElementById("hours").textContent = "0";
+                document.getElementById("minutes").textContent = "0";
+                clearInterval(timerInterval);
+                return;
+            }
 
-            // Открытие модального окна
-            document.querySelectorAll('.thumbnail').forEach(thumb => {
-                thumb.addEventListener('click', function () {
-                    modal.classList.add('show');
-                    modalImg.src = this.dataset.full;
-                    captionText.innerHTML = this.alt;
+            const minutes = Math.floor((diff / 1000 / 60) % 60);
+            const hours = Math.floor((diff / 1000 / 60 / 60) % 24);
+            const days = Math.floor(diff / 1000 / 60 / 60 / 24);
 
-                    // Блокировка скролла страницы
-                    document.body.style.overflow = 'hidden';
-                });
-            });
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+        }
 
-            // Закрытие модального окна
-            closeBtn.addEventListener('click', function () {
-                modal.classList.remove('show');
-                document.body.style.overflow = 'auto';
-            });
-
-            // Закрытие по клику вне изображения
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) {
-                    modal.classList.remove('show');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-
-            // Закрытие по ESC
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.classList.contains('show')) {
-                    modal.classList.remove('show');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
+        updateCountdown(); // сразу при загрузке
+        const timerInterval = setInterval(updateCountdown, 1000);
     </script>
 </body>
 
