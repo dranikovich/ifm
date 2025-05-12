@@ -103,13 +103,20 @@
     flex-wrap: wrap;
 }
 
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
 
 
 
 
 
-
-
+main {
+    margin-top: calc(100px + 4rem);
+}
 
 /* навигация */
 

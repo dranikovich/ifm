@@ -1,0 +1,95 @@
+.title svg {
+    left: ;
+    height: 100px;
+    top: 50%;
+    transform:
+        translateY(-50%) translateX(calc(-100%));
+    margin-left: -2rem;
+}
+
+.employes {
+    margin-top: 2.5rem;
+    column-count: 2;
+}
+
+.employes .letter {
+    gap: 1.25rem
+}
+
+.employes .letter .letter-h {
+    gap: 1.25rem;
+    color: #555;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.employes .letter .letter-h .line {
+    width: calc(120px);
+    height: 2px;
+    background-color: #dfdfdf;
+}
+
+.employes .person {
+    overflow: hidden;
+        background: linear-gradient(45deg, #F3F3F3 0% 50%, transparent 50% 100%);
+    background-size: 240% 100%;
+    /* Увеличиваем градиент в 2 раза */
+    background-position: 95%;
+    transition: .3s ease-in-out;
+    border-radius: 0.625rem;
+}
+.employes .person:hover {
+    background-position: 60% 0%;
+}
+
+.employes .person .info {
+    width: 100%;   
+}
+
+.employes .person img {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    border: 1px solid #dfdfdf;
+    margin-right: 1rem;
+}
+
+.employes .person .info .text {
+    gap: 0.5rem;
+     width: 100%;
+}
+
+.employes .person .info .text p {
+    color: #9EB4C0;
+    width: 100%;
+}
+
+.employes .person a {
+    padding: 0.75rem 2.5rem;
+    color: var(--color-primary-dark);
+    border-radius: 2rem;
+    background: #F3F3F3;
+    font-size: 1.25rem;
+    overflow: hidden;
+    transition: .3s;
+    background: linear-gradient(45deg, var(--color-primary-dark)0% 50%, #F3F3F3 50% 100%);
+    background-size: 240% 100%;
+    /* Увеличиваем градиент в 2 раза */
+    background-position: 95%;
+}
+
+.employes .person a p {
+    z-index: 10;
+    display: block;
+}
+
+.employes .person a:hover {
+    color: var(--color-f);
+    background-position: 0% 0%; /* Сдвигаем градиент */
+}
+.employes .separate{
+    height: 2px;
+    background-color: transparent;
+    margin: 2rem 0;
+}

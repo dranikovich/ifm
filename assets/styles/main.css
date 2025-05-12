@@ -1,6 +1,4 @@
-main {
-    margin-top: calc(100px + 4rem);
-}
+
 
 section.welcome .grid {
     grid-template-columns: 1fr 1fr 1fr;
