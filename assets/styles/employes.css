@@ -1,5 +1,4 @@
 .title svg {
-    left: ;
     height: 100px;
     top: 50%;
     transform:
@@ -31,33 +30,40 @@
 
 .employes .person {
     overflow: hidden;
-        background: linear-gradient(45deg, #F3F3F3 0% 50%, transparent 50% 100%);
+    background: linear-gradient(45deg, #F3F3F3 0% 50%, transparent 50% 100%);
     background-size: 240% 100%;
     /* Увеличиваем градиент в 2 раза */
     background-position: 95%;
     transition: .3s ease-in-out;
     border-radius: 0.625rem;
 }
+
 .employes .person:hover {
     background-position: 60% 0%;
 }
 
 .employes .person .info {
-    width: 100%;   
+    width: 100%;
+}
+
+.employes .person .image {
+    /* margin-right: 1rem; */
 }
 
 .employes .person img {
     height: 120px;
     width: 120px;
+    max-width: none;
     object-fit: cover;
     border-radius: 0.625rem;
     border: 1px solid #dfdfdf;
-    margin-right: 1rem;
+
 }
 
 .employes .person .info .text {
     gap: 0.5rem;
-     width: 100%;
+    width: 100%;
+    padding-left: 1rem;
 }
 
 .employes .person .info .text p {
@@ -66,6 +72,7 @@
 }
 
 .employes .person a {
+    
     padding: 0.75rem 2.5rem;
     color: var(--color-primary-dark);
     border-radius: 2rem;
@@ -77,18 +84,18 @@
     background-size: 240% 100%;
     /* Увеличиваем градиент в 2 раза */
     background-position: 95%;
+    display: block;
+    width: 180px;
 }
 
-.employes .person a p {
-    z-index: 10;
-    display: block;
-}
 
 .employes .person a:hover {
     color: var(--color-f);
-    background-position: 0% 0%; /* Сдвигаем градиент */
+    background-position: 0% 0%;
+    /* Сдвигаем градиент */
 }
-.employes .separate{
+
+.employes .separate {
     height: 2px;
     background-color: transparent;
     margin: 2rem 0;
