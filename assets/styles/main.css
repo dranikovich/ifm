@@ -351,10 +351,20 @@ section.about-news-timer p {
     line-height: 140%;
 }
 
-section.about-news-timer .container-seminar h3 {
+section.about-news-timer .container-seminar h4 {
     font-weight: 600;
     color: var(--color-primary-dark);
     margin-bottom: 1rem;
+    text-align: center;
+}
+section.about-news-timer #days,
+section.about-news-timer #hours,
+section.about-news-timer #minutes{
+    color: var(--color-f);
+    margin: 0;
+}
+section.about-news-timer .container-seminar h4 span{
+    font-weight: 500;
 }
 
 section.about-news-timer .container-seminar h5,
