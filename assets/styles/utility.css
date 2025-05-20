@@ -328,7 +328,7 @@ header.show {
 }
 
 .abiturient .wrot {
-    background: url(../images/abiturient_bg.png);
+    background: url(../images/abiturient_bg.webp);
     background-size: cover;
     justify-content: center;
     padding: 0.5rem;
@@ -507,7 +507,7 @@ header.show {
 }
 
 .contacts .content .image {
-    background-image: linear-gradient(#22222293), url(../images/contacts.jpg);
+    background-image: linear-gradient(#22222293), url(../images/contacts.webp);
     background-position: top center;
     background-size: cover;
     color: var(--color-f);
