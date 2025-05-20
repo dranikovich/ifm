@@ -112,7 +112,29 @@
 
 
 
+.back-to-top {
+  position: fixed;
+  bottom: -60px; /* Начальное положение - скрыто */
+  right: 20px;
+  padding: 10px 15px;
+  background: var(--color-primary-dark);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
 
+.back-to-top.visible {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  background: var(--color-primary);
+}
 
 main {
     margin-top: calc(100px + 4rem);

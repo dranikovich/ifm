@@ -763,10 +763,11 @@
         <div class="close-btn cross" title="Закрыть" data-target="dropdown3"></div>
     </div>
     <div class="overlay"></div>
+    <button id="backToTop" class="back-to-top">↑ Наверх</button>
     <main>
         <div class="container">
             <div class="title relative" data-aos="fade-right">
-                <svg  class="absolute" style="" viewBox="0 0 144 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="absolute" style="" viewBox="0 0 144 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M72 68.5183C71.128 68.5258 70.2622 68.37 69.4473 68.0588L3.99273 40.2949C2.80965 39.7925 1.8002 38.952 1.0902 37.8782C0.380199 36.8044 0.00104712 35.5448 0 34.2565C0.00104712 32.9681 0.380199 31.7085 1.0902 30.6347C1.8002 29.5609 2.80965 28.7204 3.99273 28.218L69.4473 0.519736C70.2549 0.176744 71.123 0 72 0C72.877 0 73.7451 0.176744 74.5527 0.519736L140.007 28.218C141.19 28.7204 142.2 29.5609 142.91 30.6347C143.62 31.7085 143.999 32.9681 144 34.2565C143.999 35.5448 143.62 36.8044 142.91 37.8782C142.2 38.952 141.19 39.7925 140.007 40.2949L74.5527 68.0588C73.7378 68.37 72.872 68.5258 72 68.5183ZM23.3673 34.2565L72 54.866L120.633 34.2565L72 13.7125L23.3673 34.2565Z"
                         fill="#222222" />
@@ -1280,6 +1281,28 @@
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopBtn = document.getElementById('backToTop');
+            const welcomeSection = document.querySelector('.welcome');
+
+            // Проверяем высоту секции welcome
+            const welcomeHeight = welcomeSection ? welcomeSection.offsetHeight : 500;
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > welcomeHeight) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
         const links = document.querySelectorAll('.nav-link');
         const dropdowns = document.querySelectorAll('.dropdown');
         const overlay = document.querySelector('.overlay');
