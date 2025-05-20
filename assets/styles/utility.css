@@ -1,5 +1,8 @@
 
-.font-regular {
+.ovfy{
+    overflow-y: hidden;
+}
+.font-regular { 
     font-weight: var(--font-weight-regular);
 }
 

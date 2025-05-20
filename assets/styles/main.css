@@ -1,4 +1,38 @@
-
+.svg-b-1{
+    width: 40rem;
+    top: -20rem;
+    left: -10rem;
+    /* transform: translate(-10rem, -50%) rotate(45deg); */
+    fill: #b3e4f960;
+}
+.svg-b-2{
+    width: 80rem;
+    top: 20rem;
+    right: -40rem;
+    /* transform: translate(-50%, -10%) rotate(0); */
+    fill: #b3e4f960;
+}
+.svg-b-3{
+    width: 80rem;
+    top: 20rem;
+    right: -40rem;
+    /* transform: translate(-50%, -10%) rotate(0); */
+    fill: #b3e4f960;
+}
+.svg-b-4{
+    height: 20%;
+    top: 20rem;
+    left: -4rem;
+    /* transform: translate(-50%, -10%) rotate(0); */
+    fill: #b3e4f960;
+}
+.svg-b-5{
+    height: 40%;
+    bottom: 10%;
+    left: -4rem;
+    transform: translate(-30%) rotate(45deg);
+    fill: #b3e4f960;
+}
 
 section.welcome .grid {
     grid-template-columns: 1fr 1fr 1fr;
@@ -261,6 +295,7 @@ section.section-form .container-advantages .advantages {
 }
 
 .section-map {
+    overflow-y: hidden;
     height: 600px;
     padding-top: 2.5rem;
 }
@@ -457,6 +492,9 @@ section.about-news-timer .container-news a.news-button svg {
 
 section.gallery h2 {
     padding: 2.5rem 0;
+}
+section.gallery .container{
+    overflow-y: hidden;
 }
 
 section.gallery .album {
