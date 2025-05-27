@@ -1,9 +1,10 @@
 .title svg {
-    height: 100px;
-    top: 50%;
+    height: 5rem;
+    margin-right: 2rem;
+    /* top: 50%;
     transform:
         translateY(-50%) translateX(calc(-100%));
-    margin-left: -2rem;
+    margin-left: -2rem; */
 }
 
 .employes {
@@ -12,7 +13,7 @@
 }
 
 .employes .letter {
-    gap: 1.25rem
+    gap: 4rem
 }
 
 .employes .letter .letter-h {
@@ -22,23 +23,44 @@
     margin-bottom: 1rem;
 }
 
+.employes .letter .column {
+    gap: 2rem;
+}
+
+@media (max-width: 960px) {
+    .employes .letter .column {
+        width: 100%;
+    }
+
+    .employes .letter {
+        flex-direction: column;
+        gap: 0rem;
+    }
+}
+.employes .letter .letter-h h3{
+    font-weight: 700;
+}
 .employes .letter .letter-h .line {
     width: calc(120px);
     height: 2px;
     background-color: #dfdfdf;
 }
 
-.employes .person {
+.employes:not(.course) .person {
+
+
+    border-radius: 0.625rem;
+}
+.employes:not(.course) .person {
     overflow: hidden;
     background: linear-gradient(45deg, #F3F3F3 0% 50%, transparent 50% 100%);
     background-size: 240% 100%;
-    /* Увеличиваем градиент в 2 раза */
+        /* Увеличиваем градиент в 2 раза */
     background-position: 95%;
     transition: .3s ease-in-out;
-    border-radius: 0.625rem;
 }
 
-.employes .person:hover {
+.employes:not(.course) .person:hover {
     background-position: 60% 0%;
 }
 
@@ -51,19 +73,21 @@
 }
 
 .employes .person img {
-    height: 120px;
-    width: 120px;
+    height: 7.5rem;
+    width: 7.5rem;
     max-width: none;
     object-fit: cover;
     border-radius: 0.625rem;
     border: 1px solid #dfdfdf;
-
 }
 
 .employes .person .info .text {
-    gap: 0.5rem;
+    gap: 1rem;
     width: 100%;
     padding-left: 1rem;
+}
+.employes .person .info .text ul li{
+    margin-bottom: 0.5rem;
 }
 
 .employes .person .info .text p {
@@ -71,8 +95,8 @@
     width: 100%;
 }
 
-.employes .person a {
-    
+.employes:not(.course) .person a {
+
     padding: 0.75rem 2.5rem;
     color: var(--color-primary-dark);
     border-radius: 2rem;
@@ -84,12 +108,14 @@
     background-size: 240% 100%;
     /* Увеличиваем градиент в 2 раза */
     background-position: 95%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 180px;
 }
 
 
-.employes .person a:hover {
+.employes:not(.course) .person a:hover {
     color: var(--color-f);
     background-position: 0% 0%;
     /* Сдвигаем градиент */
@@ -99,4 +125,24 @@
     height: 2px;
     background-color: transparent;
     margin: 2rem 0;
+}
+.employes.course .person .text h5{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.employes.course .person .text li a{
+text-decoration: underline;
+}
+.employes.course .person .text li svg{
+    width: 1.5rem;
+    display: block;
+}
+.employes.course .person .text li span{
+    width: 90%;
+}
+.employes.course .person .text ul{
+    gap: 0.2rem;
+}
+.employes.course .person .info{
+    align-items: start;
 }
