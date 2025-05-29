@@ -69,7 +69,8 @@
 }
 
 .employes .person .image {
-    /* margin-right: 1rem; */
+    width: 7.5rem;
+    height: 7.5rem;
 }
 
 .employes .person img {

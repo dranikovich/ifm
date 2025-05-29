@@ -30,6 +30,27 @@
             list-style: disc;
             padding-left: 2rem;
         }
+
+        .swiper-pagination-bullet {
+            border: 0.15rem solid white;
+            width: 0.75rem;
+            height: 0.75rem;
+            opacity: .7;
+        }
+
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+
+        .employes .person .image {
+            width: 15rem;
+            height: 15rem;
+        }
+
+        .employes .person .image img {
+            width: 15rem;
+            height: 15rem;
+        }
     </style>
 </head>
 
@@ -261,7 +282,7 @@
                     </svg>
                 </a>
                 <div class="w50 links df jcse aic">
-                    <a href="#" data-target="dropdown1" class="nav-link">Абитуриенту</a>
+                    <a href="#" data-target="dropdown1" class="nav-link">Поступающим</a>
                     <a href="#" data-target="dropdown2" class="nav-link">Студенту</a>
                     <a href="#" data-target="dropdown3" class="nav-link">Контакты</a>
                     <a href="./employes.html" class="nav-link">Сотрудники</a>
@@ -788,7 +809,7 @@
                     >
                 </div>
                 <div class="last">
-                    Расписание
+                    Курсовые
                 </div>
             </div>
             <div class="title df aic" data-aos="fade-right">
@@ -1173,11 +1194,19 @@
                             </div>
                             <div data-aos="fade-up" class="person  df aic jcsb">
                                 <div class="info df aic">
-                                    <div class="image">
-                                        <img src="./assets/images/emps/Курин Владислав Викторович.jpg" alt="">
+                                    <div class="image swiper mySwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/emps/placeholder.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/emps/Курин Владислав Викторович.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
                                     </div>
                                     <div class="text df fldc">
-                                        <h5>Галин Михаил Александрович, <br>Курин Владислав Викторович</h5>
+                                        <h5>Курин Владислав Викторович,<br> Галин Михаил Александрови </h5>
                                         <ul class="df fldc">
                                             <li>
                                                 <a href="https://pnn.unn.ru/studies/research/klushin2"
@@ -1198,8 +1227,17 @@
                             </div>
                             <div data-aos="fade-up" class="person  df aic jcsb">
                                 <div class="info df aic">
-                                    <div class="image">
-                                        <img src="./assets/images/emps/Самохвалов Алексей Владимирович.jpg" alt="">
+                                    <div class="image swiper mySwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/emps/Самохвалов Алексей Владимирович.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/emps/Мельников А.С..jpg" alt="">
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
                                     </div>
                                     <div class="text df fldc">
                                         <h5>Самохвалов Алексей Владимирович, Мельников Александр Сергеевич</h5>
@@ -1222,8 +1260,17 @@
                             </div>
                             <div data-aos="fade-up" class="person  df aic jcsb">
                                 <div class="info df aic">
-                                    <div class="image">
-                                        <img src="./assets/images/emps/Мельников А.С..jpg" alt="">
+                                    <div class="image swiper mySwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/emps/placeholder.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/emps/Мельников А.С..jpg" alt="">
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
                                     </div>
                                     <div class="text df fldc">
                                         <h5>Беспалов Антон Андреевич, Мельников Александр Сергеевич</h5>
@@ -1247,8 +1294,17 @@
                             </div>
                             <div data-aos="fade-up" class="person  df aic jcsb">
                                 <div class="info df aic">
-                                    <div class="image">
-                                        <img src="./assets/images/emps/Копасов Александр Андреевич.jpg" alt="">
+                                    <div class="image swiper mySwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/emps/Копасов Александр Андреевич.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./assets/images/emps/Мельников А.С..jpg" alt="">
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
                                     </div>
                                     <div class="text df fldc">
                                         <h5>Копасов Александр Андреевич, Мельников Александр Сергеевич</h5>
@@ -1297,7 +1353,7 @@
                             <div data-aos="fade-up" class="person  df aic jcsb">
                                 <div class="info df aic">
                                     <div class="image">
-                                        <img src="./assets/images/emps/Новиков А.В..jpg" alt="">
+                                        <img src="./assets/images/emps/placeholder.jpg" alt="">
                                     </div>
                                     <div class="text df fldc">
                                         <h5>Новиков Михаил Афанасьевич</h5>
@@ -1364,7 +1420,7 @@
                                         <img src="./assets/images/emps/Токман И.Д..jpg" alt="">
                                     </div>
                                     <div class="text df fldc">
-                                        <h5>Токман Иосиф Давыдович</h5>
+                                        <h5>Токман Иосиф Давидович</h5>
                                         <ul class="df fldc">
                                             <li>
                                                 <a href="https://pnn.unn.ru/studies/research/tokman"
@@ -1480,7 +1536,7 @@
                             <div data-aos="fade-up" class="person  df aic jcsb">
                                 <div class="info df aic">
                                     <div class="image">
-                                        <img src="./assets/images/emps/Пестов Е.Е..jpg" alt="">
+                                        <img src="./assets/images/emps/placeholder.jpg" alt="">
                                     </div>
                                     <div class="text df fldc">
                                         <h5>Пестов Алексей Евгеньевич</h5>
@@ -1966,7 +2022,7 @@
                                         <img src="./assets/images/emps/placeholder.jpg" alt="">
                                     </div>
                                     <div class="text df fldc">
-                                        <h5>Андрей Леонидович Панкратов</h5>
+                                        <h5>Панкратов Андрей Леонидович </h5>
                                         <ul class="df fldc">
                                             <li>
                                                 <a href="https://pnn.unn.ru/studies/research/pankratov"
@@ -2115,6 +2171,15 @@
         });
         overlay.addEventListener('click', closeAll);
 
+        var swiper = new Swiper(".mySwiper", {
+            effect: "flip",
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+        });
 
     </script>
 </body>
