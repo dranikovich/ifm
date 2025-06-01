@@ -567,6 +567,10 @@ header.show {
     color: #1D6295;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
 /* подвал */
 
 footer {
