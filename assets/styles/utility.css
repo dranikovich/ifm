@@ -567,7 +567,7 @@ header.show {
     color: #1D6295;
 }
 
-.underline{
+.underline {
     text-decoration: underline;
 }
 
@@ -580,7 +580,77 @@ footer {
     padding: 2.5rem 0;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+}
 
+/* Контейнер модального контента */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.3s ease-in-out;
+    line-height: 150%;
+}
+
+/* Шапка модального окна */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1D6295;
+    padding: 1rem 0;
+}
+.modal-body ul {
+    margin-left: 1rem;
+}
+.modal-body{
+    margin: 2rem auto;
+}
+.modal-body p {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+}
+.modal-body p strong{
+font-weight: 600;
+}
+/* Крестик закрытия */
+.close {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 @media (max-width: 1440px) {
     html {
