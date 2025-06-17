@@ -58,10 +58,6 @@
     width: 100%;
 }
 
-.employes .person .image {
-    width: 7.5rem;
-    height: 7.5rem;
-}
 
 .employes .person img {
     height: 7.5rem;
@@ -101,7 +97,6 @@
     transition: .3s;
     background: linear-gradient(45deg, var(--color-primary-dark)0% 50%, #F3F3F3 50% 100%);
     background-size: 240% 100%;
-    /* Увеличиваем градиент в 2 раза */
     background-position: 95%;
     display: flex;
     justify-content: center;
@@ -113,7 +108,6 @@
 .employes:not(.course) .person a:hover {
     color: var(--color-f);
     background-position: 0% 0%;
-    /* Сдвигаем градиент */
 }
 
 .employes .separate {
@@ -130,20 +124,6 @@
 .employes.course .person .text li a {
     text-decoration: underline;
 }
-
-.employes.course .person .text li svg {
-    width: 1.5rem;
-    display: block;
-}
-
-.employes.course .person .text li span {
-    width: 90%;
-}
-
-.employes.course .person .text ul {
-    gap: 0.2rem;
-}
-
 .employes.course .person .info {
     align-items: start;
 }
