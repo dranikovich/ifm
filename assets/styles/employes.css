@@ -37,9 +37,11 @@
         gap: 0rem;
     }
 }
-.employes .letter .letter-h h3{
+
+.employes .letter .letter-h h3 {
     font-weight: 700;
 }
+
 .employes .letter .letter-h .line {
     width: calc(120px);
     height: 2px;
@@ -50,18 +52,6 @@
 
 
     border-radius: 0.625rem;
-}
-.employes:not(.course) .person {
-    overflow: hidden;
-    background: linear-gradient(45deg, #F3F3F3 0% 50%, transparent 50% 100%);
-    background-size: 240% 100%;
-        /* Увеличиваем градиент в 2 раза */
-    background-position: 95%;
-    transition: .3s ease-in-out;
-}
-
-.employes:not(.course) .person:hover {
-    background-position: 60% 0%;
 }
 
 .employes .person .info {
@@ -79,7 +69,10 @@
     max-width: none;
     object-fit: cover;
     border-radius: 0.625rem;
-    border: 1px solid #dfdfdf;
+    border: 1px solid rgba(209, 209, 209, 0.647);
+    box-shadow: 0 0.125px 0.3rem rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+    object-position: top center;
 }
 
 .employes .person .info .text {
@@ -87,7 +80,8 @@
     width: 100%;
     padding-left: 1rem;
 }
-.employes .person .info .text ul li{
+
+.employes .person .info .text ul li {
     margin-bottom: 0.5rem;
 }
 
@@ -127,23 +121,29 @@
     background-color: transparent;
     margin: 2rem 0;
 }
-.employes.course .person .text h5{
+
+.employes.course .person .text h5 {
     font-weight: 600;
     font-size: 1.5rem;
 }
-.employes.course .person .text li a{
-text-decoration: underline;
+
+.employes.course .person .text li a {
+    text-decoration: underline;
 }
-.employes.course .person .text li svg{
+
+.employes.course .person .text li svg {
     width: 1.5rem;
     display: block;
 }
-.employes.course .person .text li span{
+
+.employes.course .person .text li span {
     width: 90%;
 }
-.employes.course .person .text ul{
+
+.employes.course .person .text ul {
     gap: 0.2rem;
 }
-.employes.course .person .info{
+
+.employes.course .person .info {
     align-items: start;
 }

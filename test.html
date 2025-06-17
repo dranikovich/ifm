@@ -60,72 +60,28 @@
 
 <body>
 
-  <h1>Предыдущие семинары</h1>
+  <div style="max-width: 800px; font-family: sans-serif; line-height: 1.6;">
+    <img src="./assets/images/emps/Аладышкин А.Ю..jpg" alt="Алексей Юрьевич Аладышкин"
+      style="float: right; margin: 0 0 15px 20px; width: 250px; border-radius: 8px;">
 
-  <div class="tabs-container" id="tabs">
-    <div class="tab active" data-year="2024">2024–2025 г.</div>
-    <div class="tab" data-year="2023">2023–2024 г.</div>
-    <div class="tab" data-year="2022">2022–2023 г.</div>
+    <h1>Алексей Юрьевич Аладышкин</h1>
+    <p><strong>Ведущий научный сотрудник ИФМ РАН</strong><br>д.ф.-м.н., специалист в области физики сверхпроводников</p>
+
+    <h2>Научные интересы</h2>
+    <p>Изучение пространственных свойств сверхпроводящих пленок, наноструктур и гибридных сверхпроводник-ферромагнетик
+      систем.</p>
+
+    <h2>Образование</h2>
+    <p>1999 — ННГУ им. Н. И. Лобачевского<br>
+      2004 — кандидатская диссертация по физике конденсированного состояния</p>
+
+    <h2>Профессиональная карьера</h2>
+    <p>2005 – по н.в. — ИФМ РАН</p>
+
+    <h2>Контакт</h2>
+    <p>Email: <a href="mailto:aladyshkin@ipmras.ru">aladyshkin@ipmras.ru</a></p>
   </div>
 
-  <div class="content">
-    <div class="seminars" data-year="2024">
-      <div class="seminar">
-        <strong>Многослойные структуры на основе Ni для зеркал гебелевского типа</strong><br>
-        К. В. Дуров ・ 17 октября 2024
-      </div>
-      <div class="seminar">
-        <strong>Лазерные системы охлаждения</strong><br>
-        А. Н. Нечай ・ 31 октября 2024
-      </div>
-      <div class="seminar">
-        <strong>Скелетонизация двумерных изображений и анализ данных...</strong><br>
-        А. Ю. Аладышкин ・ 7 ноября 2024
-      </div>
-    </div>
-
-    <div class="seminars hidden" data-year="2023">
-      <div class="seminar">
-        <strong>Системы термостабилизации для квантовых устройств</strong><br>
-        И. П. Романов ・ 19 октября 2023
-      </div>
-      <div class="seminar">
-        <strong>Новые подходы к зондовой микроскопии</strong><br>
-        А. В. Лебедев ・ 2 ноября 2023
-      </div>
-    </div>
-
-    <div class="seminars hidden" data-year="2022">
-      <div class="seminar">
-        <strong>Плазменные технологии в нанофизике</strong><br>
-        С. Г. Орлова ・ 5 ноября 2022
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const tabs = document.querySelectorAll('.tab');
-    const seminarBlocks = document.querySelectorAll('.seminars');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Активный таб
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        const year = tab.dataset.year;
-
-        // Отображение семинаров
-        seminarBlocks.forEach(block => {
-          if (block.dataset.year === year) {
-            block.classList.remove('hidden');
-          } else {
-            block.classList.add('hidden');
-          }
-        });
-      });
-    });
-  </script>
 
 </body>
 

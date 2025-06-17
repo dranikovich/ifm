@@ -230,8 +230,6 @@ header .section-header .search .search-icon {
     height: 1rem;
 }
 
-header .section-header .search label {}
-
 header .section-header .search .separate {
     display: block;
     height: 50%;
@@ -614,23 +612,29 @@ footer {
     color: #1D6295;
     padding: 1rem 0;
 }
+
 .modal-body ul {
     margin-left: 1rem;
 }
-.modal-body{
+
+.modal-body {
     margin: 2rem auto;
 }
+
 .modal-body p {
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.75rem;
 }
-.modal-body p strong{
-font-weight: 600;
+
+.modal-body p strong {
+    line-height: 3.5rem;
+    font-weight: 600;
 }
+
 /* Крестик закрытия */
 .close {
-    font-size: 2rem;
+    font-size: 4rem;
     cursor: pointer;
     color: #666;
 }
@@ -638,6 +642,46 @@ font-weight: 600;
 .close:hover {
     color: #000;
 }
+
+.openModalVacation {
+  display: inline-block;
+  padding: 0.625rem 1.725rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(270deg, var(--color-primary), var(--color-primary-dark), var(--color-primary));
+  background-size: 600% 600%;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: gradientShift 15s ease infinite;
+  user-select: none;
+}
+footer .openModalVacation{
+    background: transparent;
+    color: #1D6295;
+    border: 0.125rem solid #1d6195a9;
+}
+
+.openModalVacation:hover {
+  box-shadow: 0 6px 25px rgba(0, 102, 255, 0.7);
+  transform: scale(1.02);
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 /* Анимация появления */
 @keyframes fadeIn {
@@ -847,6 +891,11 @@ font-weight: 600;
 
     .contacts .content .info {
         padding: 0;
+    }
+    footer .container{
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
     }
 }
 
