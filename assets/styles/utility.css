@@ -115,7 +115,9 @@
     position: relative;
 }
 
-
+.ws-no-wrap{
+    white-space: nowrap;
+}
 
 .back-to-top {
     position: fixed;
