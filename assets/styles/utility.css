@@ -540,7 +540,7 @@ header.show {
 }
 
 .contacts .content .image {
-    background-image: linear-gradient(#22222293), url(../images/ifm_building.webp);
+    background-image: url(../images/ifm_building.webp);
     background-position: bottom center;
     background-size: cover;
     color: var(--color-f);
